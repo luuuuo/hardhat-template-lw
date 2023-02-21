@@ -39,7 +39,7 @@
     "fs-extra": "^10.1.0",
     "hardhat": "^2.12.2",
     "hardhat-gas-reporter": "^1.0.9",
-    "husky": "^8.0.2",
+    "husky": "^8.0.3",
     "lint-staged": "^13.0.4",
     "lodash": "^4.17.21",
     "mocha": "^10.1.0",
@@ -72,6 +72,11 @@
   "packageManager": "yarn@3.2.1",
   "publishConfig": {
     "access": "public"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn prettier:write"
+    }
   },
   "scripts": {
     "clean": "shx rm -rf ./artifacts ./cache ./coverage ./types ./coverage.json && yarn typechain",
