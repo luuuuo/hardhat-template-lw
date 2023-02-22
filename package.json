@@ -43,6 +43,8 @@
     "lint-staged": "^13.0.4",
     "lodash": "^4.17.21",
     "mocha": "^10.1.0",
+    "moment": "^2.29.4",
+    "nft.storage": "^7.0.0",
     "pinst": "^3.0.0",
     "prettier": "^2.8.4",
     "prettier-plugin-solidity": "^1.1.2",
@@ -87,12 +89,15 @@
     "lint": "yarn lint:sol && yarn lint:ts && yarn prettier:check",
     "lint:sol": "solhint --max-warnings 0 \"contracts/**/*.sol\"",
     "lint:ts": "eslint --ignore-path ./.eslintignore --ext .js,.ts .",
-    "postinstall": "husky install && DOTENV_CONFIG_PATH=./.env.example yarn typechain",
+    "postinstall": "husky install && DOTENV_CONFIG_PATH=./.env yarn typechain",
     "postpublish": "pinst --enable",
     "prepublishOnly": "pinst --disable",
     "prettier:check": "prettier --check \"**/*.{js,json,md,sol,ts,yml}\"",
     "prettier:write": "prettier --write \"**/*.{js,json,md,sol,ts,yml}\"",
     "test": "hardhat test",
     "typechain": "cross-env TS_NODE_TRANSPILE_ONLY=true hardhat typechain"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.8.1"
   }
 }

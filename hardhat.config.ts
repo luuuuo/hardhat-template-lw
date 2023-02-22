@@ -119,5 +119,35 @@ const config: HardhatUserConfig = {
     target: "ethers-v5",
   },
 };
-
+/** @type import('hardhat/config').HardhatUserConfig */
+module.exports = {
+  //default network:
+  defaultNetwork: "hardhat",
+  solidity: "0.8.17",
+  networks: {
+    goerli: {
+      chainId: 5,
+      url: `https://eth-goerli.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`,
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      blockConfirmations: 6,
+    },
+    PolygonMumbai: {
+      chainId: 80001,
+      url: "https://rpc-mumbai.maticvigil.com",
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      blockConfirmations: 6,
+    },
+  },
+  etherscan: {
+    // Your API key for Etherscan
+    // Obtain one at https://etherscan.io/
+    apiKey: {
+      goerli: process.env.ETHERSCAN_API_KEY,
+      polygonMumbai: process.env.POLYGONMUMBAI_SCAN_API_KEY,
+    },
+  },
+  mocha: {
+    timeout: 500000, // 500 seconds max for running tests
+  },
+};
 export default config;
