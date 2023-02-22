@@ -34,18 +34,18 @@ npx hardhat run ./scripts/deployNFTbyMTK.js --network PolygonMumbai
 
 - 在 **[mumbai 网络](https://mumbai.polygonscan.com/)** mint MTK
 
-![1677049582677](image/README/1677049582677.png)
+![1677049582677](image/README/mint MTK.png)
 
 - 授权 MTK 额度给 NFT 合约
 
-![1677049703796](image/README/1677049703796.png)
+![1677049703796](image/README/approve MTK.png)
 
 - 在 NFT 合约中 mint 出 NFT
 
-![1677049771855](image/README/1677049771855.png)
+![1677049771855](image/README/mint NFT.png)
 
 ## 🎉 查看 NFT
 
 在 OpenSea 上查看 mint 出的 NFT
 
-![1677049912212](image/README/1677049912212.png)
+![1677049912212](image/README/opensea.png)
