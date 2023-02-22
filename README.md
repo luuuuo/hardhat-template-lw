@@ -8,7 +8,7 @@
 npx hardhat test ./test/MyToken.js
 ```
 
-## 🚧 在 Polygon Mumbai 网络上部署 NFT
+## ⚡ 在 Polygon Mumbai 网络上部署 NFT
 
 🔥 上传图片到 IPFS 服务：
 
@@ -30,7 +30,7 @@ npx hardhat test ./test/mintNFTbyMTK.js
 npx hardhat run ./scripts/deployNFTbyMTK.js --network PolygonMumbai
 ```
 
-## 🚧 使用 MTK mint NFT
+## ✨ 使用 MTK mint NFT
 
 - 在 **[mumbai 网络](https://mumbai.polygonscan.com/)** mint MTK
 
@@ -43,3 +43,9 @@ npx hardhat run ./scripts/deployNFTbyMTK.js --network PolygonMumbai
 - 在 NFT 合约中 mint 出 NFT
 
 ![1677049771855](image/README/1677049771855.png)
+
+## 🎉 查看 NFT
+
+在 OpenSea 上查看 mint 出的 NFT
+
+![1677049912212](image/README/1677049912212.png)
